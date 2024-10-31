@@ -1,4 +1,18 @@
-:root{
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
     --White: hsl(0, 0%, 100%);
 
     --Stone100: hsl(30, 54%, 90%);
@@ -35,52 +49,53 @@ body {
     padding: 40px 0;
 }
 
-.card-container{
+.card-container {
     width: 100%;
     max-width: 630px;
     height: 100%;
     margin: 80px;
     padding: 35px;
-    background-color:var(--White);
+    background-color: var(--White);
     border-radius: 15px;
 }
 
-.image-container{
+.image-container {
     display: flex;
     justify-content: center;
 }
 
-#img_omelette{
+#img_omelette {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
 }
 
-#title-card{
+#title-card {
     font-size: 30px;
     margin: 20px 0px;
 }
 
 .card-body p,
-.card-content ol > li,
-.col-1, .col-2{
+.card-content ol>li,
+.col-1,
+.col-2 {
     font-size: 14px;
     font-weight: normal;
     font-family: Outfit, sans-serif;
     color: var(--Stone600);
 }
 
-li::marker{
+li::marker {
     color: var(--Brown800);
     font-weight: 600;
 }
 
-#text-hero{
+#text-hero {
     text-align: justify;
     margin-bottom: 40px;
 }
 
-.list-preparation{
+.list-preparation {
     padding: 10px 30px;
     background: var(--Rose50);
     border-radius: 10px;
@@ -88,7 +103,7 @@ li::marker{
     padding: 15px 20px;
 }
 
-.list-preparation h5{
+.list-preparation h5 {
     color: var(--Rose800);
     font-family: Outfit, sans-serif;
     font-weight: 600;
@@ -98,53 +113,56 @@ li::marker{
 }
 
 .list-preparation ul,
-.card-content ul{
+.card-content ul {
     margin-left: 20px;
     line-height: 2;
 }
 
-.item-preparation, ul>li{
+
+.item-preparation,
+ul>li {
     font-family: Outfit, serif;
     font-size: 14px;
     color: var(--Stone600);
     max-width: 300px;
 }
 
-.item-preparation{
+.item-preparation {
     font-weight: 600;
     margin-left: 10px;
 }
 
-.card-content{
+.card-content {
     padding: 10px 5px;
     display: flex;
     flex-direction: column;
 }
 
-.card-content > h3 {
+.card-content>h3 {
     color: var(--Brown800);
     font-size: 23px;
     margin: 15px 0px;
 }
 
-.card-content > ul, ol{
+.card-content>ul,
+ol {
     margin-left: 20px;
-    
+
 }
 
-.card-content > ul > li{
+.card-content>ul>li {
     max-width: 500px;
     width: 100%;
 }
 
-.item-ingredient{
+.item-ingredient {
     font-family: Outfit, serif;
     margin-left: 15px;
     font-size: 14px;
 
 }
 
-.line-break{
+.line-break {
     border-bottom: 0.2px solid var(--Stone150);
     margin: 20px 0px;
     padding-top: 20px;
@@ -154,19 +172,19 @@ li::marker{
     font-size: 14px;
 }
 
-.item-instruction{
+.item-instruction {
     padding-left: 15px;
     margin-bottom: 10px;
     text-align: justify;
 }
 
-.item-instruction span{
+.item-instruction span {
     font-weight: 600;
     font-family: Outfit, serif;
 }
 
 
-table{
+table {
     margin-top: 15px;
     border-collapse: collapse;
 }
@@ -176,24 +194,54 @@ td {
     padding: 5px;
 }
 
-.col-1{
+.col-1 {
     padding-left: 30px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
-.col-2{
+.col-2 {
     color: var(--Brown800);
     font-weight: 600;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
 @media(max-width: 375px) {
-    body{
+    body {
         padding: 0px;
-        background: red !important;
+        background-color: var(--White);
     }
-    .card-container{
+
+    .card-container {
         margin-top: 0;
         padding-top: 0;
+    }
+
+    #img_omelette {
+        max-width: unset;
+        border-radius: unset;
+    }
+
+    .card-container {
+        width: 100%;
+        max-width: unset;
+        height: 100%;
+        margin: unset;
+        padding: unset;
+        border-radius: unset;
+    }
+
+    .card-hero,
+    .card-content {
+        padding: 10px 40px;
     }
 }
